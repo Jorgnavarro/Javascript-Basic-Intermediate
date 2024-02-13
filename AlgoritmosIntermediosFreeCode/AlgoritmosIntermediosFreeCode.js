@@ -1,5 +1,6 @@
 /*-----------------------Programación de algoritmos intermedios-------------------------
-Ahora que conoces los conceptos básicos del pensamiento algorítmico, junto con la OOP y la programación funcional, prueba tus habilidades con los desafíos de programación de algoritmos intermedios. 
+Ahora que conoces los conceptos básicos del pensamiento algorítmico, junto con la OOP y la programación funcional, 
+prueba tus habilidades con los desafíos de programación de algoritmos intermedios. 
 
 --------------------------------------------Excercise 01----------------------------------
 ----------------------------Suma todos los números en un rango----------------------
@@ -32,9 +33,15 @@ function sumAll(arr) {
 }
 console.log(sumAll([5, 30]));
 
-/*La respuesta proporcionada se hizo algo rústico, pero se logró. creamos 3 variables, creando un contador que nos va retornar el resultado, las otras variables son los rangos, el mínimo y el máximo, que según el ejercicio si se intercambia el orden debe dar el mismo resultado.
-Se completó el ejercicio con dos bucles for, usando los rangos de valMax and valMin, y almacenando las i en el contador, se aclara que no se puede usar la propiedad .length porque el array solamente tiene 2 elementos. 
-Entonces al rango máximo o mínimo según la posición de elementos se le tiene que sumar 1 porque el array siempre inicia desde 0, así que en valores no podríamos sumar todas las "i" que corresponde al número de iteración, el cual acumulamos en el contador, creamos la condición para que cuente al derecho, en caso de que el valor mínimo sea menor que el valor máximo y creamos un else para que el forma retorne el mismo valor en caso de que el valor mínimo sea mayor que el valor máximo, es decir que el conteo sea al revés. Revisemos las otras soluciones:
+/*La respuesta proporcionada se hizo algo rústico, pero se logró. creamos 3 variables, creando un contador que nos va retornar el resultado, 
+las otras variables son los rangos, el mínimo y el máximo, que según el ejercicio si se intercambia el orden debe dar el mismo resultado.
+Se completó el ejercicio con dos bucles for, usando los rangos de valMax and valMin, y almacenando las i en el contador, 
+se aclara que no se puede usar la propiedad .length porque el array solamente tiene 2 elementos. 
+Entonces al rango máximo o mínimo según la posición de elementos se le tiene que sumar 1 porque el array siempre inicia desde 0, 
+así que en valores no podríamos sumar todas las "i" que corresponde al número de iteración, el cual acumulamos en el contador, 
+creamos la condición para que cuente al derecho, en caso de que el valor mínimo sea menor que el valor máximo y 
+creamos un else para que el forma retorne el mismo valor en caso de que el valor mínimo sea mayor que el valor máximo, es decir que el conteo sea al revés. 
+Revisemos las otras soluciones:
 
 ------------------Usando Math.max and Math.min
 function sumAll(arr) {
@@ -66,7 +73,8 @@ sumAll([1, 4]);
 /*-------------------------------Excercise 02--------------------------
 ----------------------Diferenciar dos arreglos------------------------------
 Diferenciar dos matrices
-Compare dos matrices y devuelva una nueva matriz con cualquier elemento que solo se encuentre en una de las dos matrices dadas, pero no en ambas. En otras palabras, devuelva la diferencia simétrica de las dos matrices.
+Compare dos matrices y devuelva una nueva matriz con cualquier elemento que solo se encuentre en una de las dos matrices dadas, pero no en ambas. 
+En otras palabras, devuelva la diferencia simétrica de las dos matrices.
 
 Nota: puede devolver la matriz con sus elementos en cualquier orden.
 -------------Requirements
@@ -103,7 +111,10 @@ function diffArray(arr1, arr2) {
 }
 
 console.log(diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5])); 
-/*No pude resolver el ejercicio, pero la solución es muy clara, se crea una función que hace una busqueda, tomando como referencia un array, para buscar en otro, si el elemento es diferente la busqueda pushea en un nuevo array el valor que no coincide en los dos array, abajo antes de retornar el nuevo array, se hace una intercalación de función para que se puedan intercambiar los arrays y arroje el mismo resultado.
+/*No pude resolver el ejercicio, pero la solución es muy clara, se crea una función que hace una busqueda, tomando como referencia un array, 
+para buscar en otro, si el elemento es diferente la busqueda pushea en un nuevo array el valor que no coincide en los dos array, 
+abajo antes de retornar el nuevo array, 
+se hace una intercalación de función para que se puedan intercambiar los arrays y arroje el mismo resultado.
 ----------Another solutions----------
 
 ------------with includes()
@@ -114,7 +125,8 @@ function diffArray(arr1, arr2) {
 }
 diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
 
-se concatena al arr1 el arr2, luego se aplica un filter, preguntamos si el elemento se encuentra incluido en el primer array o en el segundo en comparación con la concatenación de los 2 y como resultado devolverá el elemento o los elementos.
+se concatena al arr1 el arr2, luego se aplica un filter, preguntamos si el elemento se encuentra incluido en el primer array o en el segundo en comparación 
+con la concatenación de los 2 y como resultado devolverá el elemento o los elementos.
 
 -----------------with callback function
 function diffArray(arr1, arr2) {
@@ -128,7 +140,8 @@ function diffArray(arr1, arr2) {
 
 /*-------------------------Excercise 03-----------------------------------
 ----------------------Buscar y destruir-------------
-Se le proporcionará una matriz inicial (el primer argumento de la destroyerfunción), seguida de uno o más argumentos. Elimina todos los elementos de la matriz inicial que tengan el mismo valor que estos argumentos.
+Se le proporcionará una matriz inicial (el primer argumento de la destroyerfunción), seguida de uno o más argumentos. 
+Elimina todos los elementos de la matriz inicial que tengan el mismo valor que estos argumentos.
 
 Nota: Tienes que usar el arguments objeto.
 
@@ -155,11 +168,15 @@ return arr
 
 console.log(destroyer(["possum", "trollo", 12, "safari", "hotdog", 92, 65, "grandma", "bugati", "trojan", "yacht"], "yacht", "possum", "trollo", "safari", "hotdog", "grandma", "bugati", "trojan"));
 
-/*En la solución anterior, lo que hicimos fue separar los argumentos, usando el objeto arguments, por la posición siempre arguments[0], será el array y apartir de arguments[1] en adelante, serán los elementos que vamos a comparar y posteriormente a eliminar.
-Después de separar los argumentos, los concatenamos al primer array, arr y los filtramos, indicando que los elementos que sean diferentes !arr.includes(item) || !arrArguments.includes(item), se deben retornar en un nuevo array y de esta forma es como eliminamos la coincidencias.
+/*En la solución anterior, lo que hicimos fue separar los argumentos, usando el objeto arguments, por la posición siempre arguments[0], 
+será el array y apartir de arguments[1] en adelante, serán los elementos que vamos a comparar y posteriormente a eliminar.
+Después de separar los argumentos, los concatenamos al primer array, arr y los filtramos, 
+indicando que los elementos que sean diferentes !arr.includes(item) || !arrArguments.includes(item), 
+se deben retornar en un nuevo array y de esta forma es como eliminamos la coincidencias.
 
 -----Another solutions-----------
-Debo aprender a pensar fuera de la caja, es complicado, pero entender como puedo usar, indeOf(), includes() o filter(), junto con otras propiedades es clave para el desempeño y la solución de algoritmos complejos, por ejemplo:
+Debo aprender a pensar fuera de la caja, es complicado, pero entender como puedo usar, indeOf(), includes() o filter(), 
+junto con otras propiedades es clave para el desempeño y la solución de algoritmos complejos, por ejemplo:
 La siguiente solución es algo creativa
 
 function destroyer(arr) {
@@ -182,8 +199,13 @@ function destroyer(arr) {
 
 En la línea 165, usamos el slice(1), para retornar todos los argumentos a apartir de esa posición, 
 los almacenamos en una variables y con ellos podemos comparar con el array del argumento en la posición 0, creamos un array vacío. 
-luego creamos un for para iterar sobre nuestro array en el argumento 0, iniciamos una variable con un valor booleano en false, luego creamos un segundo for que itere sobre los argumentos a partir de la posición 1, dentro de ese segundo for, creamos un if, donde indicamos que si los elementos del arr[i] son exactamente iguales a los elementos que se encuentran en valsToRemove[j], que retorne true.
-Luego de esto, de bajo del segundo for creamos un condición que indique que si la variable removeElement, instanciada en el primer for es false, es decir no se cumple la condición del segundo for, que se haga un push al array que vacío que creamos afuera de los ciclos for, luego lo retornamos por fuera de los for y obtenemos únicamente los elementos diferentes, es clave entender que el condicional que se crea if(!removeElement), se instancia una variable como false en el primer for, debido a que se debe recorrer el array, de ahí la clave de su posicionamiento.
+luego creamos un for para iterar sobre nuestro array en el argumento 0, iniciamos una variable con un valor booleano en false, 
+luego creamos un segundo for que itere sobre los argumentos a partir de la posición 1, dentro de ese segundo for, creamos un if, 
+donde indicamos que si los elementos del arr[i] son exactamente iguales a los elementos que se encuentran en valsToRemove[j], que retorne true.
+Luego de esto, de bajo del segundo for creamos un condición que indique que si la variable removeElement, instanciada en el primer for es false, 
+es decir no se cumple la condición del segundo for, que se haga un push al array que vacío que creamos afuera de los ciclos for, 
+luego lo retornamos por fuera de los for y obtenemos únicamente los elementos diferentes, es clave entender que el condicional que se crea if(!removeElement), 
+se instancia una variable como false en el primer for, debido a que se debe recorrer el array, de ahí la clave de su posicionamiento.
  */
 function destroyer2(arr) {
   const valsToRemove = Object.values(arguments).slice(1);
@@ -213,18 +235,24 @@ function destroyer3(arr) {
 }
 console.log(destroyer3(["tree", "hamburger", 53], "tree", 53));
 
-/* en la línea de la const valsToRemove, de nuevo se retornan los argumentos después de la posición 0, se retorna el array cuando se le hace un filter(), pero este filter tiene un callback con un argumento, al interior de esa función se indica que se retorne el elemento diferencial de !valsToRemove.includes(val) y en el parámetro del callback se llama cada elemento del array, designado como "val"
+/* en la línea de la const valsToRemove, de nuevo se retornan los argumentos después de la posición 0, 
+se retorna el array cuando se le hace un filter(), pero este filter tiene un callback con un argumento, 
+al interior de esa función se indica que se retorne el elemento diferencial de !valsToRemove.includes(val) 
+y en el parámetro del callback se llama cada elemento del array, designado como "val"
 
 ------------------Another solution
 function destroyer(arr, ...valsToRemove) {
   return arr.filter(elem => !valsToRemove.includes(elem));
 }
-La solución más sencilla, se utiliza el spread operator en los argumentos siguientes al argumento 0, para indicar que se almacenarán en valsToRemove, se le hace un filter al array, arr.filter, en donde el elem, sino está incluido en el valsToRemove que lo retorne.
+La solución más sencilla, se utiliza el spread operator en los argumentos siguientes al argumento 0, para indicar que se almacenarán en valsToRemove, 
+se le hace un filter al array, arr.filter, en donde el elem, sino está incluido en el valsToRemove que lo retorne.
 */
 
 /*------------------------------------------------Excercise 04-----------------------------------------------
 ------------------------------------------------Donde estás------------------------------------
-Crea una función que busque a través de un arreglo de objetos (primer argumento) y devuelva un arreglo de todos los objetos que tengan pares de nombre y valor coincidentes (segundo argumento). Cada par de nombre y valor del objeto fuente tiene que estar presente en el objeto de la colección si se va a incluir en el arreglo devuelto.
+Crea una función que busque a través de un arreglo de objetos (primer argumento) y devuelva un arreglo de todos 
+los objetos que tengan pares de nombre y valor coincidentes (segundo argumento). Cada par de nombre y valor del objeto 
+fuente tiene que estar presente en el objeto de la colección si se va a incluir en el arreglo devuelto.
 
 Por ejemplo, si el primer argumento es [{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], y el segundo argumento es { last: "Capulet" }, entonces debes devolver el tercer objeto del arreglo (el primer argumento), porque contiene el nombre y su valor, el cual fue pasado como segundo argumento.
 --------------------Requirements
@@ -255,7 +283,15 @@ return collection.filter(obj =>{
   return true;
 })
 }
-/*Explicación del código: almacenamos las propiedades usando Object.keys de source, que son los que vamos a buscar en el array de objetos. Le hacemos el filter a la collection, tomando el elemento el primer argumento obj. Al interior, instanciamos un for, donde la condición de la iteración para hacerlo escalable propSource.length, creamos un if que retorne un false si se cumplen las condiciones, la primera es: !obj.hasOwnProperty(propSource[i]), indicando que si es diferente la propiedad del obj collection a la propiedad que almacenamos en la variable propSource[i] en el elemento de index que proporcionamos en source, esto se hace con el fin de que sea escalable, si en el argumento pasamos un objeto que tenga más propiedades, automáticamente será recorrida con esa instancia [i], retorne false y en caso que sea igual retorne true, pero no es suficiente. Tenemos que indicar un || para comparar el valor del obj[propSource[i]] que hace parte del array con el valor del segundo argumento proporcionado source[propSource[i]], pero es importante, entender que se pasa la propiedad escalable con [i] 
+/*Explicación del código: almacenamos las propiedades usando Object.keys de source, 
+que son los que vamos a buscar en el array de objetos. Le hacemos el filter a la collection, 
+tomando el elemento el primer argumento obj. Al interior, instanciamos un for, donde la condición de la iteración para hacerlo escalable 
+propSource.length, creamos un if que retorne un false si se cumplen las condiciones, la primera es: !obj.hasOwnProperty(propSource[i]), 
+indicando que si es diferente la propiedad del obj collection a la propiedad que almacenamos en la variable propSource[i] 
+en el elemento de index que proporcionamos en source, esto se hace con el fin de que sea escalable, si en el argumento pasamos 
+un objeto que tenga más propiedades, automáticamente será recorrida con esa instancia [i], retorne false y en caso que sea igual retorne true, 
+pero no es suficiente. Tenemos que indicar un || para comparar el valor del obj[propSource[i]] que hace parte del array con el valor del segundo 
+argumento proporcionado source[propSource[i]], pero es importante, entender que se pasa la propiedad escalable con [i] 
 
 ----Another solution
 function whatIsInAName(collection, source) {
@@ -437,7 +473,8 @@ El segundo argumento es la palabra que se reemplazará (antes).
 
 El tercer argumento es lo que reemplazará el segundo argumento (después).
 
-Note: Mantén la capitalización del primer carácter en la palabra original cuando lo estés reemplazando. Por ejemplo, si quieres reemplazar la palabra Book por la palabra dog, debe ser reemplazada como Dog
+Note: Mantén la capitalización del primer carácter en la palabra original cuando lo estés reemplazando. Por ejemplo, 
+si quieres reemplazar la palabra Book por la palabra dog, debe ser reemplazada como Dog
 -----------------Requirements
 myReplace("Let us go to the store", "store", "mall") debe devolver la cadena Let us go to the mall.
 myReplace("He is Sleeping on the couch", "Sleeping", "sitting") debe devolver la cadena He is Sitting on the couch.
@@ -481,7 +518,10 @@ console.log(myReplace2(
   "A quick brown fox jumped over the lazy dog", "jumped", "leaped")
 );
 
-/*El código de arriba es mucho más sencillo que el mío, utiliza un condicional con una expresión regular, que indica que si la palabra a reemplazar en este caso before, inicia con una letra mayúscula, que la primera letra de la palabra after se transforme en mayúscula y luego sea concatenada con el resto de la palabra, si la palabra por before es minúscula entonces que la palabra after sea el primer caracter en minúscula y se concatene el resto de la cadena de texto con substring, para así pasar al return con el replace()*/
+/*El código de arriba es mucho más sencillo que el mío, utiliza un condicional con una expresión regular, 
+que indica que si la palabra a reemplazar en este caso before, inicia con una letra mayúscula, que la primera letra de la palabra after se transforme en mayúscula
+y luego sea concatenada con el resto de la palabra, si la palabra por before es minúscula entonces que la palabra after sea el primer caracter 
+en minúscula y se concatene el resto de la cadena de texto con substring, para así pasar al return con el replace()*/
 
 
 
@@ -495,7 +535,8 @@ console.log(newStr);
 -------------------------------Emparejamiento de ADN--------------------
 El par de hebras del ADN esta formado por pares de nucleobases. Los pares de base son representados por los caracteres AT y CG, que forman bloques de doble hélix ADN.
 
-A la cadena de ADN le falta el elemento de emparejamiento. Escribe una función que coincida con los pares de base faltantes para la hebra de ADN proporcionada. Para cada carácter de la cadena proporcionada, encuentra el carácter de par base. Devuelve los resultados como un arreglo 2d.
+A la cadena de ADN le falta el elemento de emparejamiento. Escribe una función que coincida con los pares de base faltantes para la hebra de ADN proporcionada. 
+Para cada carácter de la cadena proporcionada, encuentra el carácter de par base. Devuelve los resultados como un arreglo 2d.
 
 Por ejemplo, la entrada GCG, devuelve [["G", "C"], ["C","G"], ["G", "C"]]
 
@@ -573,7 +614,11 @@ function pairElement2(str) {
     .split("")
     .map(x => [x, pairs[x]]);
 }
-/*Explicación del código de arriba, puede ayudar mucho para el futuro, 1)creamos un objeto pairs con las claves que vamos a utilizar. 2) transformamos el string en array str.split(""), luego usamos un .map(x => [x, pairs[x]]), que retornará cada vez que itere un array con el elemento x al principio y otro elemento que al mismo tiempo ese elemento tiene como propiedad en el objeto pairs, por tanto retornará su opuesto por cada iteración, así es como se llama el valor del elemento de un objeto, "pairs[x]"
+/*Explicación del código de arriba, puede ayudar mucho para el futuro, 1)creamos un objeto pairs con las claves que vamos a utilizar. 
+2) transformamos el string en array str.split(""), luego usamos un .map(x => [x, pairs[x]]), 
+que retornará cada vez que itere un array con el elemento x al principio y otro elemento que al mismo tiempo 
+ese elemento tiene como propiedad en el objeto pairs, por tanto retornará su opuesto por cada iteración, 
+así es como se llama el valor del elemento de un objeto, "pairs[x]"
 */
 // test here
 console.log(pairElement2("GCG"));
@@ -676,7 +721,8 @@ function uniteUnique(...arr) {
 }
 console.log(uniteUnique([1, 3, 2, 3], [5, 2, 1, 4], [2, 1]));
 
-/* nunca olvidar, siempre que quieras usar el indexOf, procura indicar el array adentro de la función del filter, porque de otra forma iterará siempre en la primera posición, siempre me ocurre ese error, me demoré mucho resolviendo un problema sencillo.
+/* nunca olvidar, siempre que quieras usar el indexOf, procura indicar el array adentro de la función del filter, 
+porque de otra forma iterará siempre en la primera posición, siempre me ocurre ese error, me demoré mucho resolviendo un problema sencillo.
 ------Anothers solutions
 function uniteUnique(arr1, arr2, arr3) {
   Creates an empty array to store our final result.
@@ -708,8 +754,8 @@ function uniteUnique2() {
 
 console.log(uniteUnique2([1, 3, 2], [5, 2, 1, 4], [2, 1]));
 
-/*la solución es más sencilla cuando se usa .flat(), pone a un mismo nivel todos los arrays. Recordar que si se usa el spread operator con arguments, no se necesita pasar parámetros en la función.
-Siempre que se use un filter y se quiera operar sobre el array se debe indicar en los argumentos
+/*la solución es más sencilla cuando se usa .flat(), pone a un mismo nivel todos los arrays. Recordar que si se usa el spread operator con arguments, 
+no se necesita pasar parámetros en la función. Siempre que se use un filter y se quiera operar sobre el array se debe indicar en los argumentos
 */
 
 /*----------------------------------Excercise 12-------------------------------
@@ -773,7 +819,8 @@ convertHTML("Dolce & Gabbana");
 ----------------------Suma todos los números impares de Fibonacci-------------------
 Dado un entero positivo num, devuelve la suma de todos los números impares de Fibonacci que son menores o iguales a num.
 
-Los dos primeros números de la sucesión de Fibonacci son el 0 y el 1. Cada número adicional en la secuencia es la suma de los dos números anteriores. Los siete primeros números de la sucesión de Fibonacci son 0, 1, 1, 2, 3, 5 y 8.
+Los dos primeros números de la sucesión de Fibonacci son el 0 y el 1. Cada número adicional en la secuencia es la suma de los dos números anteriores. 
+Los siete primeros números de la sucesión de Fibonacci son 0, 1, 1, 2, 3, 5 y 8.
 
 Por ejemplo, sumFibs(10) debe devolver 10 porque todos los números impares de Fibonacci menores o iguales a 10 son 1, 1, 3 y 5.
 
@@ -819,7 +866,8 @@ console.log(sumFibs(4));
 /*---------------------------------Excercise 14-------------------------------
 
 --------------------------Suma todos los números primos--------------------------
-Un número primo es un número entero mayor que 1 con sólo dos divisores: 1 y el propio número. Por ejemplo, 2 es un número primo porque sólo es divisible entre 1 y 2. Por el contrario, 4 no es primo ya que es divisible entre 1, 2 y 4.
+Un número primo es un número entero mayor que 1 con sólo dos divisores: 1 y el propio número. Por ejemplo, 
+2 es un número primo porque sólo es divisible entre 1 y 2. Por el contrario, 4 no es primo ya que es divisible entre 1, 2 y 4.
 
 Reescribe sumPrimes para que devuelva la suma de todos los números primos que sean menores o iguales a num.
 
@@ -852,7 +900,8 @@ console.log(sumPrimes(10));
 
 /*-------------------------------Excercise 15------------------------------
 ----------------------------------Mínimo común múltiplo-----------------
-Encuentra el múltiplo común más pequeño de los parámetros proporcionados que pueden dividirse equitativamente por ambos, así como por todos los números consecutivos del rango entre estos parámetros.
+Encuentra el múltiplo común más pequeño de los parámetros proporcionados que pueden dividirse equitativamente por ambos, 
+así como por todos los números consecutivos del rango entre estos parámetros.
 
 El rango será un arreglo de dos números que no necesariamente estarán en orden numérico.
 
@@ -894,7 +943,8 @@ console.log(smallestCommons([1,5]));
 
 /*--------------------------------------Excercise 16---------------------------
 -----------------------------------------------------Déjalo caer--------------------------------------
-Dado el arreglo arr, itera y elimina cada elemento comenzando desde el primer elemento (el índice 0) hasta que la función func devuelva true cuando el elemento iterado se pasa a través de él.
+Dado el arreglo arr, itera y elimina cada elemento comenzando desde el primer elemento (el índice 0) 
+hasta que la función func devuelva true cuando el elemento iterado se pasa a través de él.
 
 Luego devuelve el resto del arreglo una vez que se cumpla la condición, de lo contrario, arr debe devolverse como un arreglo vacío.
 */
@@ -915,7 +965,12 @@ function dropElements(arr, func) {
 console.log(dropElements([0, 1, 0, 1], function(n) {return n === 1;}))
 
 
-/*Explicación del código, se crea al for para iterar el arreglo, indicando en un primer condicional que si el elemento en la posición i es verdadero, entonces se haga un corte con slice desde esa posición, el problema con este algoritmo se presenta, cuando todos los argumentos son verdaderos. Para poder diferenciar un caso de otro, utilizamos .length porque la extensión cambiaría, entonces simplemente indicamos que si el array es cortado, debería ser menor que la extensión del array original si todos los elementos son verdaderos, en caso de ser así retornamos el array recortado, y en caso de que todos los elementos cumplan la condición retornamos el array completo. Pero qué sucede sin ningún elemento cumple la condición? retornamos un array vacío.
+/*Explicación del código, se crea al for para iterar el arreglo, indicando en un primer condicional que si el elemento 
+en la posición i es verdadero, entonces se haga un corte con slice desde esa posición, el problema con este algoritmo se presenta, 
+cuando todos los argumentos son verdaderos. Para poder diferenciar un caso de otro, utilizamos .length porque la extensión cambiaría, 
+entonces simplemente indicamos que si el array es cortado, debería ser menor que la extensión del array original si todos los elementos 
+son verdaderos, en caso de ser así retornamos el array recortado, y en caso de que todos los elementos cumplan la condición retornamos 
+el array completo. Pero qué sucede sin ningún elemento cumple la condición? retornamos un array vacío.
 
 -------------Anothers solutions------------
 
@@ -932,7 +987,10 @@ console.log(dropElements2([1, 2, 3, 4], function(n) {
   return n > 2;
 }));
 
-/*Utilizando shift, el código es más completo y sencillo, se usa un bucle while, donde las condiciones de break son que mientras arr.length sea mayor que cero y el elemento sea false hasta que se haga todas la iteracciones, va a devolver los elementos true en arr.shift(), sino se cumplen esas condiciones, o todos los elementos son verdaderos, se retorna el array completo, pero si ninguno cumple la condición, se retorna un array vacío.
+/*Utilizando shift, el código es más completo y sencillo, se usa un bucle while, donde las condiciones de break son que mientras arr.length 
+sea mayor que cero y el elemento sea false hasta que se haga todas la iteracciones, va a devolver los elementos true en arr.shift(), 
+sino se cumplen esas condiciones, o todos los elementos son verdaderos, se retorna el array completo, pero si ninguno cumple la condición, 
+se retorna un array vacío.
 --------------------------
 function dropElements(arr, func) {
   let sliceIndex = arr.findIndex(func);
@@ -1013,7 +1071,9 @@ function binaryAgent(str) {
   );
 }
 
-console.log(binaryAgent("01000001 01110010 01100101 01101110 00100111 01110100 00100000 01100010 01101111 01101110 01100110 01101001 01110010 01100101 01110011 00100000 01100110 01110101 01101110 00100001 00111111"));
+console.log(binaryAgent("01000001 01110010 01100101 01101110 00100111 01110100 00100000 
+01100010 01101111 01101110 01100110 01101001 01110010 01100101 01110011 00100000 
+01100110 01110101 01101110 00100001 00111111"));
 
 /*---------------------------------Another solutions
 function binaryAgent(str) {
@@ -1078,7 +1138,8 @@ binaryAgent(
 Todo sea verdad
 Comprueba si el predicado (segundo argumento) es truthy en todos los elementos de una colección (primer argumento).
 
-En otras palabras, se te da una colección de arreglos de objetos. El predicado pre será una propiedad del objeto y debe devolver true si su valor es truthy. De lo contrario, devuelve false.
+En otras palabras, se te da una colección de arreglos de objetos. El predicado pre será una propiedad del objeto y debe devolver true si su valor es truthy. 
+De lo contrario, devuelve false.
 
 En JavaScript, los valores truthy son valores que se traducen en true cuando se evalúan en un contexto booleano.
 
@@ -1178,7 +1239,8 @@ getFullName()
 setFirstName(first)
 setLastName(last)
 setFullName(firstAndLast)
-Ejecuta las pruebas para ver el resultado esperado para cada método. Los métodos que toman un argumento deben aceptar sólo un argumento y tiene que ser una cadena. Estos métodos deben ser el único medio disponible para interactuar con el objeto.
+Ejecuta las pruebas para ver el resultado esperado para cada método. Los métodos que toman un argumento deben aceptar sólo un argumento 
+y tiene que ser una cadena. Estos métodos deben ser el único medio disponible para interactuar con el objeto.
 */
 const Person = function(firstAndLast) {
   let fullName = firstAndLast;
@@ -1248,7 +1310,8 @@ Los valores deben redondearse al número entero más cercano. El cuerpo orbitado
 El radio de la tierra es de, 6367.4447 kilómetros y el valor GM de la tierra es de, 398600.4418 km3s-2.
 ---------------------Requirements
 orbitalPeriod([{name : "sputnik", avgAlt : 35873.5553}]) debe devolver [{name: "sputnik", orbitalPeriod: 86400}].
-Esperando:orbitalPeriod([{name: "iss", avgAlt: 413.6}, {name: "hubble", avgAlt: 556.7}, {name: "moon", avgAlt: 378632.553}]) debe devolver [{name : "iss", orbitalPeriod: 5557}, {name: "hubble", orbitalPeriod: 5734}, {name: "moon", orbitalPeriod: 2377399}].
+Esperando:orbitalPeriod([{name: "iss", avgAlt: 413.6}, {name: "hubble", avgAlt: 556.7}, {name: "moon", avgAlt: 378632.553}]) 
+debe devolver [{name : "iss", orbitalPeriod: 5557}, {name: "hubble", orbitalPeriod: 5734}, {name: "moon", orbitalPeriod: 2377399}].
 */
 function orbitalPeriod(arr) {
   const GM = 398600.4418;
