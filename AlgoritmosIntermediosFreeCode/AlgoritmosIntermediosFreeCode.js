@@ -54,7 +54,8 @@ function sumAll(arr) {
   return sumBetween;
 }
 sumAll([1, 4]);
-en esta solución, se deben pasar por parámetros los dos valores y la propiedad Math sea max or min, retorna el menor o mayor valor de los números, luego se estipula el rango en el bucle for con esas instancias y se agregan las "i" al contador, para así retornarlo, con esta solución nos ahorramos un bucle for.
+en esta solución, se deben pasar por parámetros los dos valores y la propiedad Math sea max or min, retorna el menor o mayor valor de los números, 
+luego se estipula el rango en el bucle for con esas instancias y se agregan las "i" al contador, para así retornarlo, con esta solución nos ahorramos un bucle for.
 
 -------Another solution, pasando directamente la propiedad Math y copiando el array con el spread operator
 function sumAll(arr) {
@@ -151,7 +152,8 @@ destroyer([1, 2, 3, 5, 1, 2, 3], 2, 3)debería [1, 5, 1]volver
 destroyer([3, 5, 1, 2, 2], 2, 3, 5)debería [1]volver
 destroyer([2, 3, 2, 3], 2, 3)debería []volver
 destroyer(["tree", "hamburger", 53], "tree", 53)debería ["hamburger"]volver
-destroyer(["possum", "trollo", 12, "safari", "hotdog", 92, 65, "grandma", "bugati", "trojan", "yacht"], "yacht", "possum", "trollo", "safari", "hotdog", "grandma", "bugati", "trojan")debería [12,92,65]volver
+destroyer(["possum", "trollo", 12, "safari", "hotdog", 92, 65, "grandma", "bugati", "trojan", "yacht"], "yacht", "possum", "trollo", "safari", 
+"hotdog", "grandma", "bugati", "trojan")debería [12,92,65]volver
 */
 
 function destroyer(arr) {
@@ -254,7 +256,9 @@ Crea una función que busque a través de un arreglo de objetos (primer argument
 los objetos que tengan pares de nombre y valor coincidentes (segundo argumento). Cada par de nombre y valor del objeto 
 fuente tiene que estar presente en el objeto de la colección si se va a incluir en el arreglo devuelto.
 
-Por ejemplo, si el primer argumento es [{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], y el segundo argumento es { last: "Capulet" }, entonces debes devolver el tercer objeto del arreglo (el primer argumento), porque contiene el nombre y su valor, el cual fue pasado como segundo argumento.
+Por ejemplo, si el primer argumento es [{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], 
+y el segundo argumento es { last: "Capulet" }, entonces debes devolver el tercer objeto del arreglo (el primer argumento), porque contiene el nombre y su valor, 
+el cual fue pasado como segundo argumento.
 --------------------Requirements
 whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" }) debe devolver [{ first: "Tybalt", last: "Capulet" }].
 
