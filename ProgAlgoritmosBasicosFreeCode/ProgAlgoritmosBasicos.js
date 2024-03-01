@@ -1,14 +1,16 @@
 /*---------------------------Programación de algoritmos básicos
 Un algoritmo es una serie de instrucciones paso a paso que describen cómo hacer algo.
 
-Para escribir un algoritmo eficaz, ayuda el dividir un problema en partes más pequeñas y pensar cuidadosamente cómo resolver cada parte con código. En este curso, aprenderás los fundamentos del pensamiento algorítmico mediante la escritura de algoritmos que hacen de todo, desde la conversión de temperaturas hasta el manejo de arreglos 2D complejos.
+Para escribir un algoritmo eficaz, ayuda el dividir un problema en partes más pequeñas y pensar cuidadosamente cómo resolver cada parte con código. 
+En este curso, aprenderás los fundamentos del pensamiento algorítmico mediante la escritura de algoritmos que hacen de todo, desde la conversión de temperaturas hasta el manejo de arreglos 2D complejos.
 */
 
 /*---------------------------Convierte Celsius a Fahrenheit--------------------------
 La fórmula para convertir de Celsius a Fahrenheit es la temperatura en Celsius multiplicado por 9/5, más 32.
 
 --------------------------------Ejercicio 1-------------------------------------------
-Se te da una variable celsius que representa una temperatura en Celsius. Utiliza la variable fahrenheit ya definida y asígnale la temperatura Fahrenheit equivalente a la temperatura Celsius dada. Utiliza la fórmula mencionada anteriormente para ayudarte a convertir la temperatura Celsius a Fahrenheit.
+Se te da una variable celsius que representa una temperatura en Celsius. Utiliza la variable fahrenheit ya definida y asígnale la temperatura Fahrenheit equivalente a la temperatura Celsius dada. 
+Utiliza la fórmula mencionada anteriormente para ayudarte a convertir la temperatura Celsius a Fahrenheit.
 
 -------Requirements-------
 convertCtoF(0) debe devolver un número
@@ -67,7 +69,9 @@ function factorialize(num) {
     let counter = 1;
     for(let i = 0; i<num; i++){ 
         counter *= (num - i);
-        //abajo se presentan las sintaxis con las cuales se puede solucionar, sea de forma invertida o de forma normal, en este caso me demoré en resolver el algoritmo porque como es un factorial, es decir una multiplicación, no podía iniciar el counter en "0", me estaba retornando un 0, hasta que lo cambié por 1
+        /*abajo se presentan las sintaxis con las cuales se puede solucionar, sea de forma invertida o de forma normal, 
+        en este caso me demoré en resolver el algoritmo porque como es un factorial, es decir una multiplicación, 
+        no podía iniciar el counter en "0", me estaba retornando un 0, hasta que lo cambié por 1*/
         console.log((num - i));
         console.log(i + 1) 
     }
@@ -140,7 +144,8 @@ largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 85
 /*
 Para resolver el problema creamos un array vacío porque nos piden que devolvamos un array con los números más grandes de cada subarray. 
 luego creamos un contador que almacenará cada número mayor por iteración.
-En el primer for dejamos fijos el primer número de cada sub array y lo almacenamos en number counter = arr[i][0], luego tomamos cada número arr[i][j] y si es mayor que numberCounter, es decir que el primer número del array, lo igualamos o almacenamos en numberCounter.
+En el primer for dejamos fijos el primer número de cada sub array y lo almacenamos en number counter = arr[i][0], luego tomamos cada número arr[i][j] y si es mayor que numberCounter, 
+es decir que el primer número del array, lo igualamos o almacenamos en numberCounter.
 y luego por fuera de los for, hacemos el push en el array vacío que instanciamos y lo retornamos.
 */
 
@@ -233,7 +238,10 @@ function truncateString(str, num) {
 console.log(truncateString("A-", 1))
 
 /*
-En el anterior ejercicio se creó una función, en la cual se toma un string, y un número que lo corta. Sí el String.length es mayor a el número que lo corta, entonces se retorna el pedazo de string con "..." tres puntos al final, pero si el String.length es igual que al número o igual, debe retornar el string completo sin "...", se guarda en truncateWord el string con los ..., pero se indica que en caso de que sea mayor o igual el número debe retornar el string completo, en caso de que no sea así, debe retonar la palabra truncada con la expresión de "..." por eso el return se pone adentro del for, para que no haga muchas iteraciones.
+En el anterior ejercicio se creó una función, en la cual se toma un string, y un número que lo corta. Sí el String.length es mayor a el número que lo corta,
+entonces se retorna el pedazo de string con "..." tres puntos al final, pero si el String.length es igual que al número o igual, debe retornar el string completo sin "...", 
+se guarda en truncateWord el string con los ..., pero se indica que en caso de que sea mayor o igual el número debe retornar el string completo, en caso de que no sea así, debe retonar la palabra truncada con la expresión de "..." 
+por eso el return se pone adentro del for, para que no haga muchas iteraciones.
 ---anothers solutions:
 
 function truncateString(str, num) {
@@ -250,7 +258,8 @@ function truncateString(str, num) {
 */
 
 /*------------------------------Buscadores guardianes------------------------------
-Crea una función que recorra un arreglo arr y devuelva el primer elemento que pase un "detector de verdad". Esto significa que dado un elemento x, el "detector de verdad" es pasado si func(x) es true. Si ningún elemento pasa la prueba. la función debería devolver undefined.
+Crea una función que recorra un arreglo arr y devuelva el primer elemento que pase un "detector de verdad". Esto significa que dado un elemento x, 
+el "detector de verdad" es pasado si func(x) es true. Si ningún elemento pasa la prueba. la función debería devolver undefined.
 -------Requirements-------
 findElement([1, 3, 5, 8, 9, 10], function(num) { return num % 2 === 0; }) debe devolver 8.
 findElement([1, 3, 5, 9], function(num) { return num % 2 === 0; }) debe devolver undefined.
@@ -270,7 +279,10 @@ console.log(findElement([1, 3, 5, 9], num => num % 2 === 0));
 
 /*
 ----explanation
-En el caso anterior, tenemos una función que recibirá como parámetro otra función y un array. Debemos recorrer el array y después de hacerlo, se debe invocar a la función con cada uno de los elementos, y si se cumple la condición de la función pasada en los parámetros se debe retornar el primer elemento que cumpla con esa condición, para ello creamos un variable llamada num, que recibirá ese primer parametro que cumpla la condición de la función externa anidada en un if en la línea 262, se debe poner el return dentro de ese condicional para que se devuelva el primer elemento que encuentre y en caso que no se cumpla la condición no agregamos otro return porque se nos pide un undefined como retorno.
+En el caso anterior, tenemos una función que recibirá como parámetro otra función y un array. Debemos recorrer el array y después de hacerlo, 
+se debe invocar a la función con cada uno de los elementos, y si se cumple la condición de la función pasada en los parámetros se debe retornar el primer elemento que cumpla con esa condición, 
+para ello creamos un variable llamada num, que recibirá ese primer parametro que cumpla la condición de la función externa anidada en un if en la línea 262, 
+se debe poner el return dentro de ese condicional para que se devuelva el primer elemento que encuentre y en caso que no se cumpla la condición no agregamos otro return porque se nos pide un undefined como retorno.
 
 --------Anothers solutions
 unction findElement(arr, func) {
@@ -415,7 +427,8 @@ frankenSplice(["claw", "tentacle"], ["head", "shoulders", "knees", "toes"], 2);
 En este caso la funcion frankenSplice recibe 2 arrays y un número de índice, como nos indican que no debemos modificar ninguno de los arrays, debemos retornar uno nuevo, por ende debemos crear un nuevo array.
 Inicialmente copiamos el array2 con el spreadOperator porque debemos copiar el primer array en el segundo, teniendo en cuenta el índice que se nos pasa n.
 teniendo el arr2 copiado en el nuevo array, usamos la propiedad splice, que además de eliminar elementos también nos permite agregar. 
-escribimos un primer argumento con n que es donde vamos a iniciar, en este caso como no vamos a eliminar ningún elemento, el segundo argumento se deja en 0, y por último agregamos el arr1, de esta forma es como tenemos un nuevo array con elementos del arr2 como base y los del arr1 que se introducen en la copia del arr2 a partir del índice en el parámetro.
+escribimos un primer argumento con n que es donde vamos a iniciar, en este caso como no vamos a eliminar ningún elemento, el segundo argumento se deja en 0, y por último agregamos el arr1, 
+de esta forma es como tenemos un nuevo array con elementos del arr2 como base y los del arr1 que se introducen en la copia del arr2 a partir del índice en el parámetro.
 */
 
 /*-------------------------------------------------------Rebote falsy
@@ -521,7 +534,8 @@ function getIndexToIns(arr, num) {
 
 console.log(getIndexToIns([2, 5, 10], 15)); 
 /*
-Me costó realizar este ejercicio se puede decir que solo me faltaba una línea de código el return de arr.length por fuera del for, que devolvía el número de indice si el número era mayor a cualquier otro número en el array o si se pasaba un array vacío se debía de obtener el índice disponible que este caso sería cero.
+Me costó realizar este ejercicio se puede decir que solo me faltaba una línea de código el return de arr.length por fuera del for, que devolvía el número de 
+indice si el número era mayor a cualquier otro número en el array o si se pasaba un array vacío se debía de obtener el índice disponible que este caso sería cero.
 function getIndexToIns(arr, num) {
   arr.sort((a, b) => a - b); // se refactorizó esta línea
   for(let i = 0; i<arr.length; i++){
