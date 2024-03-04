@@ -36,7 +36,7 @@ try {
 } catch (error) {
     console.log(error);
 }finally{
-    console.log("Termina revisión de errores");
+    console.log("finished reviving errors");
 }
 
 /*Creando mis propios errores, usando la cláusula throws
