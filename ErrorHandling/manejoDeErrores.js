@@ -18,7 +18,8 @@ catch(e){
 /*Ya redacatamos un bloque try/catch, es importante que siempre que indiquemos un try, debemos acto seguido con el catch indicar todas los procesos necesarios para manejar dicho error */
 console.log("Estoy saltando un error");
 
-/*si observamos en la línea 16 al hacer el console.log del error, la variable e,  muestra un array que contiene el tiempo de error "ReferenceError" y el mensaje del error "x is not defined" , lo interesante es que al capturar el error, la línea siguiente se está ejecutando, por tanto nuestro pograma puede continuar */
+/*si observamos en la línea 16 al hacer el console.log del error, la variable e,  muestra un array que contiene el tiempo de error "ReferenceError" y el mensaje del error "x is not defined", 
+lo interesante es que al capturar el error, la línea siguiente se está ejecutando, por tanto nuestro pograma puede continuar */
 
 //another example, con funciones que no han sido definidas.
 
@@ -65,7 +66,9 @@ try {
 
 //ejercicio con switch
 
-/*IMPORTANTE: al momento de usar switch, el valor de la variable se compara directamente con los casos, por esta razón para el ejercicio de abajo, para poder crear condiciones más complejas que la comparación del valor de la variable, iniciamos la primera cláusula del switch en true. Luego creamos los condicionales complejos, fabricamos nuestro exception con throw y lo atrapamos en nuestro catch y lo manejamos como deseemos.
+/*IMPORTANTE: al momento de usar switch, el valor de la variable se compara directamente con los casos, 
+por esta razón para el ejercicio de abajo, para poder crear condiciones más complejas que la comparación del valor de la variable, iniciamos la primera cláusula del switch en true. 
+Luego creamos los condicionales complejos, fabricamos nuestro exception con throw y lo atrapamos en nuestro catch y lo manejamos como deseemos.
 */
 
 try{
@@ -83,8 +86,10 @@ try{
     console.log(e);
 }
 
-//cuando usamos un switch interactuamos directamente con el resultado de la variable, es decir los casos que se crean en el parámetro switch son afectados por el resultado de la variable que se pase por parámetro del mismo, pero si agregamos banderas como true or false directamente en el parámetro de la variable podemos implementar switch con case que usen condicionales complejas. 
-
+/*cuando usamos un switch interactuamos directamente con el resultado de la variable, 
+es decir los casos que se crean en el parámetro switch son afectados por el resultado de la variable que se pase por parámetro del mismo, 
+pero si agregamos banderas como true or false directamente en el parámetro de la variable podemos implementar switch con case que usen condicionales complejas. 
+*/
 /*Usando if */
 let test = "hola papá";
 
