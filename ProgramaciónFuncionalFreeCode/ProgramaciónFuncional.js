@@ -49,11 +49,13 @@ console.log(getTea(40));
 /*------------------------------------Comprende la terminología de la programación funcional------------------------------
 El equipo de FCC tuvo un cambio de humor y ahora quiere dos tipos de té: té verde y té negro. Hecho general: Los cambios del estado de ánimo de los clientes son bastante concurrentes.
 
-Con esa información, tendremos que volver a visitar la función getTea del último desafío para manejar varias solicitudes de té. Podemos modificar getTea para aceptar una función como parámetro y así poder cambiar el tipo de té que prepara. Esto hace que getTea sea más flexible y le da al programador más control cuando las solicitudes del cliente cambian.
+Con esa información, tendremos que volver a visitar la función getTea del último desafío para manejar varias solicitudes de té. 
+Podemos modificar getTea para aceptar una función como parámetro y así poder cambiar el tipo de té que prepara. Esto hace que getTea sea más flexible y le da al programador más control cuando las solicitudes del cliente cambian.
 
 Pero primero, cubramos alguna terminología de la programación funcional:
 
-Callbacks son las funciones que se deslizan o pasan a otra función para decidir la invocación de esa función. Es posible que las hayas visto pasar a otros métodos, por ejemplo en filter, la función callback le dice a JavaScript los criterios para filtrar un arreglo.
+Callbacks son las funciones que se deslizan o pasan a otra función para decidir la invocación de esa función. Es posible que las hayas visto pasar a otros métodos, por ejemplo en filter, 
+la función callback le dice a JavaScript los criterios para filtrar un arreglo.
 
 Las funciones que pueden ser asignadas a una variable, pasadas a otra función o devueltas desde otra función como cualquier otro valor normal, se llaman funciones de primera clase. En JavaScript, todas las funciones son funciones de primera clase.
 
@@ -62,7 +64,8 @@ Las funciones que toman una función como argumento, o devuelven una función co
 Cuando las funciones se pasan o se devuelven desde otra función, las funciones que se pasaron o devolvieron se pueden llamar lambda.
 
 ----------------------Excercise 02------------------------
-Prepara 27 tazas de té verde (green tea) y 13 tazas de té negro (black tea) y almacénalas en las variables tea4GreenTeamFCC y tea4BlackTeamFCC, respectivamente. Ten en cuenta que la función getTea ha sido modificada por lo que ahora recibe una función como primer argumento.
+Prepara 27 tazas de té verde (green tea) y 13 tazas de té negro (black tea) y almacénalas en las variables tea4GreenTeamFCC y tea4BlackTeamFCC, respectivamente. 
+Ten en cuenta que la función getTea ha sido modificada por lo que ahora recibe una función como primer argumento.
 
 Nota: Los datos (el número de tazas de té) son suministrados como el último argumento. Discutiremos más sobre esto en lecciones posteriores.
 ------------------Requirements
@@ -110,16 +113,21 @@ A menudo las sentencias cambian el estado del programa, como actualizar variable
 
 Por el contrario, la programación funcional es una forma de programación declarativa. Le dice al ordenador lo que quiere hacer llamando a un método o función.
 
-JavaScript ofrece muchos métodos predefinidos que manejan tareas comunes para que no necesites escribir cómo debe ejecutar el equipo. Por ejemplo, en el lugar de usar el bucle for mencionado anteriormente se podría llamar al método map que maneja los detalles de iteración sobre una matriz. Esto ayuda a evitar errores semánticos, como los "Off By One Errors" que fueron cubiertos en la sección Depuración.
+JavaScript ofrece muchos métodos predefinidos que manejan tareas comunes para que no necesites escribir cómo debe ejecutar el equipo. Por ejemplo, 
+en el lugar de usar el bucle for mencionado anteriormente se podría llamar al método map que maneja los detalles de iteración sobre una matriz. Esto ayuda a evitar errores semánticos, 
+como los "Off By One Errors" que fueron cubiertos en la sección Depuración.
 
 Considere el escenario: está navegando por la web en su navegador y quiere rastrear las pestañas que ha abierto. Intentemos modelar esto con un código simple orientado a objetos.
 
-Un objeto ventana está formado por pestañas y normalmente tienes más de una abierta. Los títulos de cada sitio abierto en cada ventana se mantienen en un arreglo. Después de trabajar en el navegador (abriendo nuevas pestañas, combinando ventanas y cerrando pestañas), deseas imprimir las pestañas que todavía están abiertas. Las pestañas cerradas se eliminan de la matriz y las nuevas pestañas (por simplicidad) se añaden al final de la misma.
+Un objeto ventana está formado por pestañas y normalmente tienes más de una abierta. Los títulos de cada sitio abierto en cada ventana se mantienen en un arreglo. 
+Después de trabajar en el navegador (abriendo nuevas pestañas, combinando ventanas y cerrando pestañas), deseas imprimir las pestañas que todavía están abiertas. 
+Las pestañas cerradas se eliminan de la matriz y las nuevas pestañas (por simplicidad) se añaden al final de la misma.
 
 El editor de código muestra una implementación de esta funcionalidad con funciones para tabOpen(), tabClose() y join(). El array tabs es parte del objeto ventana que almacena el nombre de las páginas abiertas.
 
 -------------------------------Excercise 03------------------------------
-Examine el código en el editor. Está utilizando un método que tiene efectos secundarios en el programa, provocando un comportamiento incorrecto. La lista final de pestañas abiertas, guardadas en finalTabs.tabsdeberia ser ['FB', 'Gitter', 'Reddit', 'Twitter', 'Medium', 'new tab', 'Netflix', 'YouTube', 'Vine', 'GMail', 'Work mail', 'Docs', 'freeCodeCamp', 'new tab']pero la lista producida por el código es un poco diferente.
+Examine el código en el editor. Está utilizando un método que tiene efectos secundarios en el programa, provocando un comportamiento incorrecto. La lista final de pestañas abiertas, 
+guardadas en finalTabs.tabsdeberia ser ['FB', 'Gitter', 'Reddit', 'Twitter', 'Medium', 'new tab', 'Netflix', 'YouTube', 'Vine', 'GMail', 'Work mail', 'Docs', 'freeCodeCamp', 'new tab']pero la lista producida por el código es un poco diferente.
 
 Cambia Window.prototype.tabClose para que elimine la pestaña correcta.
 --------------------Requirements
@@ -188,7 +196,8 @@ splice() siempre debe usarse con cuidado ya que modifica los contenidos en los q
 */
 
 /*---------------------------------Evitar efectos secundarios utilizando programación funcional------------------------------
-Si aún no te has dado cuenta, el problema en el desafío anterior estaba en la llamada splicede la función tabClose(). Desafortunadamente, splicemodifica el arreglo original a la que se llama, por lo que la segunda llamada a ella utilizo un arreglo modificado, y dio resultados inesperados.
+Si aún no te has dado cuenta, el problema en el desafío anterior estaba en la llamada splicede la función tabClose(). 
+Desafortunadamente, splicemodifica el arreglo original a la que se llama, por lo que la segunda llamada a ella utilizo un arreglo modificado, y dio resultados inesperados.
 
 Este es un pequeño ejemplo de un patrón mucho mayor: se llama una función en una variable, arreglo o un objeto, y la función modifica la variable o algo en el objeto.
 
@@ -255,13 +264,15 @@ function incrementer(param) {
 /*------------------------------------Refactoriza variables globales por fuera de funciones-----------------------------------
 Hasta ahora, hemos visto dos principios distintos para la programación funcional:
 
-No alteres una variable u objeto: crea nuevas variables y objetos y devuélvelos, si es necesario, desde una función. Pista: usar algo como const newArr = arrVar, donde arrVar es un arreglo, simplemente creará una referencia a la variable existente y no una copia. Así que cambiaría un valor en newArr cambiaría el valor en arrVar.
+No alteres una variable u objeto: crea nuevas variables y objetos y devuélvelos, si es necesario, desde una función. Pista: usar algo como const newArr = arrVar, 
+donde arrVar es un arreglo, simplemente creará una referencia a la variable existente y no una copia. Así que cambiaría un valor en newArr cambiaría el valor en arrVar.
 
 Declara parámetros de función: cualquier cálculo dentro de una función depende sólo de los argumentos pasados ​​a la función y no en ningún objeto o variable global.
 
 Añadir uno a un número no es muy emocionante, pero podemos aplicar estos principios cuando trabajamos con arreglos u objetos más complejos.
 -----------------------Excercise 06-------------------
-Reescribe el código para que el arreglo global bookList no sea cambiado dentro de ninguna de las funciones. La función add debe agregar el bookName dado al final del arreglo pasado a este y devolver un nuevo arreglo (lista). La función remove debe eliminar el bookName dado del arreglo pasado a este.
+Reescribe el código para que el arreglo global bookList no sea cambiado dentro de ninguna de las funciones. 
+La función add debe agregar el bookName dado al final del arreglo pasado a este y devolver un nuevo arreglo (lista). La función remove debe eliminar el bookName dado del arreglo pasado a este.
 
 Nota: ambas funciones deben devolver un arreglo y cualquier nuevo parámetro debe ser agregado antes del parámetro bookName.
 -----------------Requirements
@@ -326,7 +337,9 @@ Hasta ahora hemos aprendido a utilizar funciones puras para evitar efectos secun
 
 Este es solo el principio. Como su nombre indica, la programación funcional se centra en una teoría de funciones.
 
-Tendría sentido pasarlos como argumentos a otras funciones y devolver una función de otra función. Las funciones se consideran first class objects en JavaScript, lo que significa que pueden ser usados como cualquier otro objeto. Pueden guardarse en variables, almacenarse en un objeto o pasarse como argumentos de función.
+Tendría sentido pasarlos como argumentos a otras funciones y devolver una función de otra función. 
+Las funciones se consideran first class objects en JavaScript, lo que significa que pueden ser usados como cualquier otro objeto. 
+Pueden guardarse en variables, almacenarse en un objeto o pasarse como argumentos de función.
 
 Empecemos con algunas funciones de arreglos simples, que son métodos en el prototipo de objetos del arreglo. En este ejercicio estamos utilizando Array.prototype.map() o más específicamente map.
 
@@ -354,7 +367,9 @@ console.log(names);
 
 
 /*-------------------------Excercise 07------------------------------
-El arreglo watchList contiene objetos con información sobre varias películas. Usa map en watchList para asignar un nuevo arreglo de objetos a la variable ratings. Cada película en el nuevo arreglo debe tener solo una tecla title con el nombre de la película, y una tecla rating con la calificación IMDB. El código en el editor utiliza actualmente un bucle for para hacer esto, por lo que debes reemplazar la funcionalidad del bucle con tu expresión map.
+El arreglo watchList contiene objetos con información sobre varias películas. Usa map en watchList para asignar un nuevo arreglo de objetos a la variable ratings. 
+Cada película en el nuevo arreglo debe tener solo una tecla title con el nombre de la película, y una tecla rating con la calificación IMDB. 
+El código en el editor utiliza actualmente un bucle for para hacer esto, por lo que debes reemplazar la funcionalidad del bucle con tu expresión map.
 -------------------Requirements
 La variable watchList no debe cambiar.
 Tu código no debe usar un bucle for.
@@ -576,11 +591,14 @@ Array.prototype.myMap = function (callback) {
 /*--------------------------------Usa el método de "filter" para extraer datos de un arreglo--------------------------------------
 Otra función útil de los arreglos es Array.prototype.filter() o simplemente filter().
 
-filter Llama a una función sobre cada elemento del arreglo y devuelve un nuevo arreglo, conteniendo solo los elementos para los cuales la función devolvió un valor de verdadero - Es decir, un valor que devuelve true si paso al constructor Boolean(). En otras palabras, filtra el arreglo, basándose en la función que se le pasa. Al igual que map, hace esto sin necesidad de modificar el arreglo original.
+filter Llama a una función sobre cada elemento del arreglo y devuelve un nuevo arreglo, 
+conteniendo solo los elementos para los cuales la función devolvió un valor de verdadero - Es decir, un valor que devuelve true si paso al constructor Boolean(). 
+En otras palabras, filtra el arreglo, basándose en la función que se le pasa. Al igual que map, hace esto sin necesidad de modificar el arreglo original.
 
 La función callback acepta tres argumentos. El primer argumento es el elemento actual que se está procesando. El segundo es el índice de ese elemento y el tercero es el arreglo sobre el que se llamó al método filter.
 
-A continuación se muestra un ejemplo en el que se utiliza el método filter en el arreglo users para devolver un nuevo arreglo que contiene sólo a los usuarios menores de 30 años. Para que sea más fácil, el ejemplo solo utiliza el primer argumento de la función callback.
+A continuación se muestra un ejemplo en el que se utiliza el método filter en el arreglo users para devolver un nuevo arreglo que contiene sólo a los usuarios menores de 30 años. 
+Para que sea más fácil, el ejemplo solo utiliza el primer argumento de la función callback.
 
 const users = [
   { name: 'John', age: 34 },
@@ -593,7 +611,9 @@ console.log(usersUnder30);
 
 La consola muestra el valor [ { name: 'Amy', age: 20 }, { name: 'camperCat', age: 10 } ].
 ----------------------------Excercise 09---------------------
-La variable watchList contiene un arreglo de objetos con información sobre varias películas. Utiliza una combinación de filter y map en watchList para asignar un nuevo arreglo de objetos con solo title y rating claves. El nuevo arreglo solo debe incluir objetos donde imdbRating es mayor o igual a 8.0. Ten en cuenta que los valores rating se guardan como cadenas en el objeto y puedes necesitar convertirlos en números para realizar operaciones matemáticas en ellos.
+La variable watchList contiene un arreglo de objetos con información sobre varias películas. 
+Utiliza una combinación de filter y map en watchList para asignar un nuevo arreglo de objetos con solo title y rating claves. 
+El nuevo arreglo solo debe incluir objetos donde imdbRating es mayor o igual a 8.0. Ten en cuenta que los valores rating se guardan como cadenas en el objeto y puedes necesitar convertirlos en números para realizar operaciones matemáticas en ellos.
 ------------------------Requirements
 La variable watchList no debe cambiar.
 Tu código debe usar el método filter.
@@ -1092,7 +1112,9 @@ const str20 = arr20.join("").split("");
 //str tendrá una cadena con valor Hello World.
 console.log(str20);
 
-//en la combinación de arriba, unimos dos palabras en un solo array y tomamos caracter por caracter para realizar múltiples operaciones con String, por ejemplo si quisieramos retonar un array con las letras órdenadas de forma alfabética. Pero primero debemos transformar el array con todas las letras en minúsculas, usamos un map
+//en la combinación de arriba, unimos dos palabras en un solo array y tomamos caracter por caracter para realizar múltiples operaciones con String, 
+//por ejemplo si quisieramos retonar un array con las letras órdenadas de forma alfabética. 
+//Pero primero debemos transformar el array con todas las letras en minúsculas, usamos un map
 let arrLowerCase = str20.map(string => string.toLowerCase());
 
 arrLowerCase.sort((function(a, b) {
@@ -1100,10 +1122,13 @@ arrLowerCase.sort((function(a, b) {
 }));
 console.log(arrLowerCase.join(" "));
 
-/*En este caso se puede entender la diferencia entre un string y un array, cuales métodos se pueden aplicar y cuales no, por ello siempre se debe procurar mutar la información de forma que podamos aplicar propiedades funcionales para nuestros requerimientos.
-se tienen dos palabras separadas, se unen, se introducen en un array que las separa por caracteres, luego iteramos en el array con un map, y retornamos un array haciendo uso de sort que ordena el array de forma alfabética. Si agregammos el join(" ") al final retornamos solo la cadena de texto con las palabras en orden alfabético, si lo quitamos retornamos un array.
+/*En este caso se puede entender la diferencia entre un string y un array, cuales métodos se pueden aplicar y cuales no, 
+por ello siempre se debe procurar mutar la información de forma que podamos aplicar propiedades funcionales para nuestros requerimientos.
+se tienen dos palabras separadas, se unen, se introducen en un array que las separa por caracteres, luego iteramos en el array con un map, 
+y retornamos un array haciendo uso de sort que ordena el array de forma alfabética. Si agregammos el join(" ") al final retornamos solo la cadena de texto con las palabras en orden alfabético, si lo quitamos retornamos un array.
 ----------------------Excercise 20----------------
-Utiliza el método join (entre otros) dentro de la función sentensify para hacer una oración a partir de las palabras en la cadena str. La función debe devolver una cadena. Por ejemplo, I-like-Star-Wars se convertiría en I like Star Wars. Para este desafío, no utilices el método replace.
+Utiliza el método join (entre otros) dentro de la función sentensify para hacer una oración a partir de las palabras en la cadena str. La función debe devolver una cadena. 
+Por ejemplo, I-like-Star-Wars se convertiría en I like Star Wars. Para este desafío, no utilices el método replace.
 ------------------Requirements
 Tu código debe usar el método join.
 Tu código no debe utilizar el método replace.
@@ -1123,11 +1148,14 @@ console.log(sentensify("May-the-force-be-with-you"));
 /*Se aplica el split para eliminar los simbolos, luego el join para devolver una cadena de texto, debido a que sin el join se retorna un array.
 
 ----------------------------------Aplicar programación funcional para convertir cadenas a slugs de URL---------------------
-Los últimos desafíos abarcaban una serie de métodos útiles para arreglos y cadenas, que siguen los principios de la programación funcional. También hemos aprendido acerca de reduce, que es un poderoso método utilizado para reducir los problemas a formas más simples. Desde el cálculo de promedios a la ordenación, cualquier operación con arreglos puede lograrse si lo aplicamos. Recuerda que map y filter son casos especiales de reduce.
+Los últimos desafíos abarcaban una serie de métodos útiles para arreglos y cadenas, que siguen los principios de la programación funcional. 
+También hemos aprendido acerca de reduce, que es un poderoso método utilizado para reducir los problemas a formas más simples. Desde el cálculo de promedios a la ordenación, 
+cualquier operación con arreglos puede lograrse si lo aplicamos. Recuerda que map y filter son casos especiales de reduce.
 
 Combinemos lo que hemos aprendido para resolver un problema práctico.
 
-Muchos sitios de gestión de contenidos (CMS) tienen los títulos de una publicación añadidos como parte de la URL con el simple propósito de ser marcadores. Por ejemplo, si escribes una publicación titulada Stop Using Reduce, es probable que la url tenga parte de este titulo en ella (.../stop-using-reduce). Puede que ya hayas notado esto en el sitio de freeCodeCamp.
+Muchos sitios de gestión de contenidos (CMS) tienen los títulos de una publicación añadidos como parte de la URL con el simple propósito de ser marcadores. 
+Por ejemplo, si escribes una publicación titulada Stop Using Reduce, es probable que la url tenga parte de este titulo en ella (.../stop-using-reduce). Puede que ya hayas notado esto en el sitio de freeCodeCamp.
 
 ---------------------------Excercise 21---------------------------
 Rellena la función urlSlug para convertir una cadena title y devolver la versión con guiones para la URL. Puedes utilizar cualquiera de los métodos vistos en esta sección y no utilices replace. Aquí están los requisitos:
@@ -1154,7 +1182,8 @@ return titleFormat;
 // Cambia solo el código encima de esta línea
 console.log(urlSlug("A Mind Needs Books Like A Sword Needs A Whetstone"));
 
-/*Nos demoramos mucho en resolver el problema porque no sabíamos como frenar la creación de guiones cade vez que se usaba un espacio, ló unico que se tenía que agregar en la expresión regular era el +, con esto indicamos que se cancela todo tipo de espacio y se reemplaza por un solo guión medio "-"
+/*Nos demoramos mucho en resolver el problema porque no sabíamos como frenar la creación de guiones cade vez que se usaba un espacio, 
+ló unico que se tenía que agregar en la expresión regular era el +, con esto indicamos que se cancela todo tipo de espacio y se reemplaza por un solo guión medio "-"
 
 ----------Another solution--------
 function urlSlug(title) {
@@ -1253,7 +1282,8 @@ console.log(curried2(1)(2));
 
 /*curried(1)(2) devolverá 3.
 
-Esto es útil en tu programa si no puedes proporcionar todos los argumentos a una función al mismo tiempo. Puedes guardar la llamada a cada función dentro de una variable, la cual mantendrá la referencia de la función devuelta que toma el siguiente argumento cuando este disponible. Aquí hay un ejemplo utilizando la función currificada del ejemplo anterior:
+Esto es útil en tu programa si no puedes proporcionar todos los argumentos a una función al mismo tiempo. Puedes guardar la llamada a cada función dentro de una variable, 
+la cual mantendrá la referencia de la función devuelta que toma el siguiente argumento cuando este disponible. Aquí hay un ejemplo utilizando la función currificada del ejemplo anterior:
 */
 const funcForY = curried(1);
 console.log(funcForY(2)); // 3
