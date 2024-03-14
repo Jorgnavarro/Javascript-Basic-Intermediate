@@ -1,9 +1,11 @@
 /*-----------------------------------Usa el método "test"---------------------------------*/
 /*Las expresiones regulares se utilizan en lenguajes de programación para coincidir con partes de cadenas. Creas patrones para ayudarte a hacer esa coincidencia.
 
-Si quieres encontrar la palabra the en la cadena The dog chased the cat, puedes utilizar la siguiente expresión regular: /the/. Ten en cuenta que las comillas no son requeridas dentro de la expresión regular.
+Si quieres encontrar la palabra the en la cadena The dog chased the cat, puedes utilizar la siguiente expresión regular: /the/. 
+Ten en cuenta que las comillas no son requeridas dentro de la expresión regular.
 
-JavaScript tiene múltiples formas de usar expresiones regulares. Una forma de probar una expresión regular es usando el método .test(). El método .test() toma la expresión regular, la aplica a una cadena (que se coloca dentro de los paréntesis), y devuelve true o false si tu patrón encuentra algo o no.*/
+JavaScript tiene múltiples formas de usar expresiones regulares. Una forma de probar una expresión regular es usando el método .test(). 
+El método .test() toma la expresión regular, la aplica a una cadena (que se coloca dentro de los paréntesis), y devuelve true o false si tu patrón encuentra algo o no.*/
 
 /*const { log } = require("sync");*/
 
@@ -24,7 +26,8 @@ console.log(result);
 
 /*----------------------------Haz coincidir cadenas literales------------------------*/
 
-/*En el desafío anterior, buscaste la palabra Hello usando la expresión regular /Hello/. Esa expresión regular buscó una coincidencia literal de la cadena Hello. Aquí hay otro ejemplo donde se busca una coincidencia literal de la cadena Kevin:*/
+/*En el desafío anterior, buscaste la palabra Hello usando la expresión regular /Hello/. Esa expresión regular buscó una coincidencia literal de la cadena Hello. 
+Aquí hay otro ejemplo donde se busca una coincidencia literal de la cadena Kevin:*/
 
 let testStr2 = "Hello, my name is Kevin.";
 let testRegex2 = /Kevin/;
@@ -70,7 +73,8 @@ console.log(result3);
 
 La capitalización (o también llamada capitalización de letra) es la diferencia entre mayúsculas y minúsculas. Ejemplos de mayúsculas son A, B y C. Ejemplos de minúsculas son a, b y c.
 
-Puedes coincidir ambos casos utilizando algo llamado bandera. Existen otras banderas, pero aquí te centrarás en la que ignora la capitalización de las letras, la bandera i. Puedes usarla añadiéndola a la expresión regular. Un ejemplo de uso de esta bandera es /ignorecase/i. Esta expresión regular puede coincidir con las cadenas ignorecase, igNoreCase e IgnoreCase.*/
+Puedes coincidir ambos casos utilizando algo llamado bandera. Existen otras banderas, pero aquí te centrarás en la que ignora la capitalización de las letras, la bandera i. 
+Puedes usarla añadiéndola a la expresión regular. Un ejemplo de uso de esta bandera es /ignorecase/i. Esta expresión regular puede coincidir con las cadenas ignorecase, igNoreCase e IgnoreCase.*/
 
 /*----------------------------------ejercicio 4------------------------------------------------*/
 
@@ -165,9 +169,12 @@ console.log(result5);
 //en este caso, en la variable "starRegex", se usó la bandera i, que permite ignorar mayúsculas y la bandera g que nos permite obtener múltiples patrones
 
 /*----------------------------Haz coincidir cualquier cosa-----------------------------------*/
-/*A veces no conoces (o no necesitas conocer) los caracteres exactos en tus patrones. Pensar en todas las palabras que coincidan, digamos, con una ortografía errónea llevaría mucho tiempo. Afortunadamente, puedes ahorrar tiempo utilizando el carácter de comodín: .
+/*A veces no conoces (o no necesitas conocer) los caracteres exactos en tus patrones. Pensar en todas las palabras que coincidan, digamos, con una ortografía errónea llevaría mucho tiempo. 
+Afortunadamente, puedes ahorrar tiempo utilizando el carácter de comodín: .
 
-El carácter de comodín "." coincidirá con cualquier carácter único. El comodín también es llamado dot y period. Puedes utilizar el carácter de comodín como cualquier otro carácter en la expresión regular. Por ejemplo, si quieres hacer coincidir hug, huh, hut, y hum, puedes usar la la expresión regular /hu./ para que coincida con las cuatro palabras. */
+El carácter de comodín "." coincidirá con cualquier carácter único. El comodín también es llamado dot y period. 
+Puedes utilizar el carácter de comodín como cualquier otro carácter en la expresión regular. Por ejemplo, si quieres hacer coincidir hug, huh, hut, y hum, 
+puedes usar la la expresión regular /hu./ para que coincida con las cuatro palabras. */
 
 let humStr = "I'll hum a song";
 let hugStr = "Bear hug";
