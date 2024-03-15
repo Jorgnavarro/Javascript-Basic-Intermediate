@@ -195,7 +195,8 @@ console.log(result6);
 
 
 /*------------Haz coincidir un sólo carácter con múltiples posibilidades----*/
-/* Aprendiste cómo hacer coincidir los patrones literales (/literal/) y el carácter de comodín (/./). Estos son los extremos de las expresiones regulares, donde uno encuentra coincidencias exactas y el otro coincide de todo. Hay opciones que representan un equilibrio entre los dos extremos.
+/* Aprendiste cómo hacer coincidir los patrones literales (/literal/) y el carácter de comodín (/./). 
+Estos son los extremos de las expresiones regulares, donde uno encuentra coincidencias exactas y el otro coincide de todo. Hay opciones que representan un equilibrio entre los dos extremos.
 
 Puedes buscar un patrón literal con cierta flexibilidad utilizando las clases de caracteres. Las clases de caracteres te permiten definir un grupo de caracteres que deseas coincidir colocándolos dentro de corchetes ([ y ]).
 
@@ -226,7 +227,9 @@ console.log(result8);
 
 /*-----------------------Haz coincidir las letras del alfabeto----------------*/
 /*
-Has visto cómo puedes usar los conjuntos de caracteres para especificar un grupo de caracteres a coincidir, pero eso requiere escribir mucho cuando necesitas coincidir con un amplio rango de caracteres (por ejemplo, cada letra en el alfabeto). Afortunadamente, hay una funcionalidad incorporada que hace esto corto y sencillo.
+Has visto cómo puedes usar los conjuntos de caracteres para especificar un grupo de caracteres a coincidir, 
+pero eso requiere escribir mucho cuando necesitas coincidir con un amplio rango de caracteres (por ejemplo, cada letra en el alfabeto). Afortunadamente, 
+hay una funcionalidad incorporada que hace esto corto y sencillo.
 
 Dentro de un conjunto de caracteres, puedes definir un rango de caracteres a coincidir usando un carácter de guion: -.
 
@@ -343,7 +346,9 @@ console.log(oPhrase.match(goRegex));
 
 /*-----------------------------------Ejercicio 13-------------------------*/
 
-/*Para este desafío, chewieQuote ha sido inicializada entre bastidores con la cadena Aaaaaaaaaaaaaaaarrrgh!. Crea una expresión regular chewieRegex que utilice el carácter * para encontrar el carácter A mayúscula seguido inmediatamente por cero o más caracteres a minúscula en chewieQuote. Tu expresión regular no necesita banderas o clases de caracteres, y no debe coincidir con ninguna de las otras comillas.*/
+/*Para este desafío, chewieQuote ha sido inicializada entre bastidores con la cadena Aaaaaaaaaaaaaaaarrrgh!. 
+Crea una expresión regular chewieRegex que utilice el carácter * para encontrar el carácter A mayúscula seguido inmediatamente por cero o más caracteres a minúscula en chewieQuote. 
+Tu expresión regular no necesita banderas o clases de caracteres, y no debe coincidir con ninguna de las otras comillas.*/
 
 /*--------------------------------solución------------------------------*/
 let chewieQuote = "Aaaaaaaaaaaaaaaarrrgh!";
@@ -356,7 +361,8 @@ console.log(result13);
 /*-------------------Encuentra caracteres con una coincidencia perezosa--------*/
 
 /*
-En las expresiones regulares, una "coincidencia codiciosa" encuentra la parte más larga posible de una cadena que se ajusta al patrón de la expresión regular y la devuelve como una coincidencia. La alternativa es llamada "coincidencia perezosa", la cual encuentra la parte más pequeña posible de la cadena que satisface el patrón de la expresión regular.
+En las expresiones regulares, una "coincidencia codiciosa" encuentra la parte más larga posible de una cadena que se ajusta al patrón de la expresión regular y la devuelve como una coincidencia. 
+La alternativa es llamada "coincidencia perezosa", la cual encuentra la parte más pequeña posible de la cadena que satisface el patrón de la expresión regular.
 
 Puedes aplicar la expresión regular /t[a-z]*i/ a la cadena "titanic". Esta expresión regular es básicamente un patrón que comienza con t, termina con i, y tiene algunas letras intermedias.
 
