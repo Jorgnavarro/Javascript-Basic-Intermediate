@@ -600,16 +600,22 @@ let result22 = userCheck.test(username);
 console.log(username.match(userCheck));
 console.log(result22);
 
-/*En el ejercicio de arriba tenemos 2 expresiones regulares que están anidadas con el OR "|" la primera "^[A-Za-z]{2}[A-Za-z]*\d*$" nos indica que: el nombre de usuario debe iniciar con al menos dos letras ^[A-Za-z]{2}, la expresión "[A-Za-z]*" nos indica que se puede continuar con letras casi que sin limite sean mayúsculas o minúsculas, y para finalizar, la expresión "\d*$" nos indica que se pueden agregar una cantidad de números sin límites al final de la sucesión de las letras, es decir que el nombre de usuario no puede iniciar por números.
+/*En el ejercicio de arriba tenemos 2 expresiones regulares que están anidadas con el OR "|" la primera "^[A-Za-z]{2}[A-Za-z]*\d*$" nos indica que: el nombre de usuario debe iniciar con al menos dos letras ^[A-Za-z]{2}, la expresión "[A-Za-z]*" 
+nos indica que se puede continuar con letras casi que sin limite sean mayúsculas o minúsculas, y para finalizar, la expresión "\d*$" nos indica que se pueden agregar una cantidad de números sin límites al final de la sucesión de las letras, 
+es decir que el nombre de usuario no puede iniciar por números.
 
-la segunda "^[A-Za-z]{1}[A-Za-z]*\d{2}$\d*", nos indica con esto ^[A-Za-z]{1} , que el nombre de usuario debe comenzar con al menos una letra, seguido de la secuencia de letras [A-Za-z]* o en de dos números \d{2}$ al final de haber iniciado el nombre de usuario con una letra, y después de eso una cantidad casi que ilimitada de números \d*, no se debe olvidar que afuera del regex se debe agregar la bandera global /g para que todo pueda funcionar.
+la segunda "^[A-Za-z]{1}[A-Za-z]*\d{2}$\d*", nos indica con esto ^[A-Za-z]{1} , 
+que el nombre de usuario debe comenzar con al menos una letra, seguido de la secuencia de letras [A-Za-z]* o en de dos números \d{2}$ al final de haber iniciado el nombre de usuario con una letra, 
+y después de eso una cantidad casi que ilimitada de números \d*, no se debe olvidar que afuera del regex se debe agregar la bandera global /g para que todo pueda funcionar.
 */
 
 /*----------------------------------------------Haz coincidir espacios en blanco-----------------------------------*/
 /*
 Los desafíos por el momento han cubierto las letras que coinciden con el alfabeto y los números. También puedes hacer que coincidan los espacios en blanco o los espacios entre las letras.
 
-Puedes buscar los espacios en blanco usando \s que es una s minúscula. Este patrón no solo coincide con los espacios en blanco, también con los caracteres de retorno de carro, tabulaciones, alimentación de formulario y saltos de línea. Puedes pensar que es similar a las clases de caracteres [ \r\t\f\n\v].
+Puedes buscar los espacios en blanco usando \s que es una s minúscula. 
+Este patrón no solo coincide con los espacios en blanco, también con los caracteres de retorno de carro, tabulaciones, alimentación de formulario y saltos de línea. 
+Puedes pensar que es similar a las clases de caracteres [ \r\t\f\n\v].
 */
 
 let whiteSpace = "Whitespace. Whitespace everywhere!"
@@ -631,7 +637,9 @@ console.log(result23);
 /*
 Aprendiste a buscar espacios en blanco usando \s, con una s en minúscula. También puedes buscar todo excepto los espacios en blanco.
 
-Busca caracteres que no sean espacios en blanco usando \S, la cual es una s mayúscula. Este patrón no coincidirá con los caracteres de espacios en blanco, retorno de carro, tabulaciones, alimentación de formulario y saltos de línea. Puedes pensar que es similar a la clase de caracteres [^ \r\t\f\n\v].
+Busca caracteres que no sean espacios en blanco usando \S, la cual es una s mayúscula. 
+Este patrón no coincidirá con los caracteres de espacios en blanco, retorno de carro, tabulaciones, alimentación de formulario y saltos de línea. 
+Puedes pensar que es similar a la clase de caracteres [^ \r\t\f\n\v].
 */
 let whiteSpace24 = "Whitespace. Whitespace everywhere!"
 let nonSpaceRegex = /\S/g;
@@ -760,9 +768,11 @@ Los lookaheads son patrones que le indican a JavaScript que busque por anticipad
 
 Hay dos tipos de lookaheads: lookahead positivo y lookahead negativo.
 
-Un lookahead positivo buscará para asegurarse de que el elemento en el patrón de búsqueda este allí, pero en realidad no lo coincidirá. Un lookahead positivo se usa como (?=...) donde el ... es la parte requerida que no coincide.
-
-Por otro lado, un lookahead negativo buscará para asegurarse de que el elemento en el patrón de búsqueda no este allí. Un lookahead negativo se usa como (?!...) donde el ... es el patrón que no quieres que esté allí. El resto del patrón se devuelve si la parte de lookahead negativo no está presente.
+Un lookahead positivo buscará para asegurarse de que el elemento en el patrón de búsqueda este allí, pero en realidad no lo coincidirá. 
+Un lookahead positivo se usa como (?=...) donde el ... es la parte requerida que no coincide.
+Por otro lado, un lookahead negativo buscará para asegurarse de que el elemento en el patrón de búsqueda no este allí. 
+Un lookahead negativo se usa como (?!...) donde el ... es el patrón que no quieres que esté allí. 
+El resto del patrón se devuelve si la parte de lookahead negativo no está presente.
 
 Los lookaheads son un poco confusos, pero algunos ejemplos ayudarán.
 */
@@ -788,8 +798,10 @@ let sampleWord = "22222";
 let pwRegex = /(?=\w{5})(?=\D*\d{2})(?!\d)/; // Cambia esta línea
 let result29 = pwRegex.test(sampleWord);
 console.log(result29);
-//En la expresión anterior en pwRegex, indicamos con el primer lookaHead positivo (?=\w{5}) que la contraseña debe ser mayor a 5 carácteres, con el segundo lookaHead positivo (?=\D*\d{2}) estamos indicando que pueden ser más de 5 caracteres o menos, que no sean números, pero que a su vez, al menos esten dos números consecutivos y el último lookAHead (?!\d) nos negará que se pueda crear una contraseña de solo números.
-
+/*En la expresión anterior en pwRegex, indicamos con el primer lookaHead positivo (?=\w{5}) que la contraseña debe ser mayor a 5 carácteres, 
+con el segundo lookaHead positivo (?=\D*\d{2}) estamos indicando que pueden ser más de 5 caracteres o menos, que no sean números, pero que a su vez, 
+al menos esten dos números consecutivos y el último lookAHead (?!\d) nos negará que se pueda crear una contraseña de solo números.
+*/
 /*--------------------------------Comprueba agrupaciones mixtas de caracteres---------------------------------------*/
 /*
 A veces queremos comprobar grupos de caracteres utilizando una expresión regular y para conseguirlo usamos paréntesis ().
@@ -827,9 +839,11 @@ let repeatStr = "row row row your boat";
 
 /*Podrías usar /row row row/, pero ¿qué pasa si no conoces la palabra específica que se repite? Los grupos de captura pueden utilizarse para encontrar subcadenas repetidas.
 
-Los grupos de captura se construyen encerrando entre paréntesis el patrón de expresión regular a capturar. En este caso, el objetivo es capturar una palabra formada por caracteres alfanuméricos, por lo que el grupo de captura será \w+ encerrado entre paréntesis: /(\w+)/.
+Los grupos de captura se construyen encerrando entre paréntesis el patrón de expresión regular a capturar. 
+En este caso, el objetivo es capturar una palabra formada por caracteres alfanuméricos, por lo que el grupo de captura será \w+ encerrado entre paréntesis: /(\w+)/.
 
-La subcadena que coincide con el grupo se guarda en una "variable" temporal, a la que se puede acceder dentro de la misma expresión regular utilizando una barra invertida y el número del grupo de captura (por ejemplo, \1). Los grupos de captura se numeran automáticamente por la posición de sus paréntesis de apertura (de izquierda a derecha), empezando por el 1.
+La subcadena que coincide con el grupo se guarda en una "variable" temporal, a la que se puede acceder dentro de la misma expresión regular utilizando una barra invertida y el número del grupo de captura (por ejemplo, \1). 
+Los grupos de captura se numeran automáticamente por la posición de sus paréntesis de apertura (de izquierda a derecha), empezando por el 1.
 
 El siguiente ejemplo encuentra cualquier palabra que aparezca tres veces separada por un espacio:
  */
@@ -857,7 +871,8 @@ console.log(repeatNum.match(reRegex));
 /*
 La búsqueda es útil. Sin embargo, puedes hacer que la búsqueda sea aún más poderosa si también cambias (o reemplazas) el texto con el que coincide.
 
-Puedes buscar y reemplazar texto en una cadena usando .replace() en una cadena. Las entradas para .replace() son primero el patrón de expresiones regulares que deseas buscar. El segundo parámetro es la cadena para reemplazar la coincidencia o una función para hacer algo.
+Puedes buscar y reemplazar texto en una cadena usando .replace() en una cadena. Las entradas para .replace() son primero el patrón de expresiones regulares que deseas buscar. 
+El segundo parámetro es la cadena para reemplazar la coincidencia o una función para hacer algo.
 */
 let wrongText = "The sky is silver.";
 let silverRegex = /silver/;
@@ -874,7 +889,9 @@ console.log(changeOrder);
 
 /*--------------------------------------------------Ejercicio 32---------------------------------------*/
 /*
-Escribe una expresión regular fixRegex utilizando tres grupos de captura que buscarán cada palabra en la cadena one two three. Luego actualiza la variable replaceText para reemplazar one two three con la cadena three two one y asigna el resultado a la variable result. Asegúrate de utilizar grupos de captura en la cadena de reemplazo utilizando la sintaxis del signo de dólar ($).
+Escribe una expresión regular fixRegex utilizando tres grupos de captura que buscarán cada palabra en la cadena one two three. 
+Luego actualiza la variable replaceText para reemplazar one two three con la cadena three two one y asigna el resultado a la variable result. 
+Asegúrate de utilizar grupos de captura en la cadena de reemplazo utilizando la sintaxis del signo de dólar ($).
 */
 
 let str32 = "one two three";
@@ -883,7 +900,9 @@ let replaceText = "$3 $2 $1"; // Cambia esta línea
 let result32 = str32.replace(fixRegex, replaceText);
 console.log(result32);
 
-/*De la forma anterior a la función replace que recibe 2 parámetros o los valores, de forma más organizada primero los almacenamos en variables para no introducir en la función .replace los valores directamente, primero se crear el regex con los grupos de captura teniendo en cuenta los espacios y posteriormente se llaman las variables las cuales son incrementales de izquierda a derecha*/
+/*De la forma anterior a la función replace que recibe 2 parámetros o los valores, 
+de forma más organizada primero los almacenamos en variables para no introducir en la función .replace los valores directamente, 
+primero se crear el regex con los grupos de captura teniendo en cuenta los espacios y posteriormente se llaman las variables las cuales son incrementales de izquierda a derecha*/
 
 /*-------------Elimina espacio en blanco del inicio y final----------------*/
 /*
@@ -903,4 +922,5 @@ console.log(wsRegex.test(hello));
 console.log(hello.match(wsRegex));
 console.log(result33);
 
-/*En el ejercicio anterior, con la expresión ^\s+ estamos señalando el espacio del inicio de la cadena de texto, luego seguimos con la expresión or | para indicar que \s+$ el ultimo espacio encontrando todas las similitudes con "/g" serán reemplazados por "", ningún espacio */
+/*En el ejercicio anterior, con la expresión ^\s+ estamos señalando el espacio del inicio de la cadena de texto, 
+luego seguimos con la expresión or | para indicar que \s+$ el ultimo espacio encontrando todas las similitudes con "/g" serán reemplazados por "", ningún espacio */
