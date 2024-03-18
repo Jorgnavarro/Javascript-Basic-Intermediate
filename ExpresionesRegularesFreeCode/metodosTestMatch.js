@@ -1,4 +1,4 @@
-/*-----------------------------------Usa el método "test"---------------------------------*/
+he/*-----------------------------------Usa el método "test"---------------------------------*/
 /*Las expresiones regulares se utilizan en lenguajes de programación para coincidir con partes de cadenas. Creas patrones para ayudarte a hacer esa coincidencia.
 
 Si quieres encontrar la palabra the en la cadena The dog chased the cat, puedes utilizar la siguiente expresión regular: /the/. 
