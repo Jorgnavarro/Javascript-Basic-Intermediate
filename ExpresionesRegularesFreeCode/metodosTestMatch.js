@@ -387,7 +387,8 @@ console.log(result14);
 
 /*--------------------Encuentra uno o más criminales en una cacería-----------------------*/
 /*
-Es hora de hacer una pausa y probar tus nuevas habilidades para escribir expresiones regulares. Un grupo de criminales se han escapado de la cárcel, pero no sabes cuántos. Sin embargo, sabes que permanecen unidos cuando están alrededor de otras personas. Eres responsable de encontrar a todos los criminales a la vez.
+Es hora de hacer una pausa y probar tus nuevas habilidades para escribir expresiones regulares. Un grupo de criminales se han escapado de la cárcel, pero no sabes cuántos. 
+Sin embargo, sabes que permanecen unidos cuando están alrededor de otras personas. Eres responsable de encontrar a todos los criminales a la vez.
 
 Este es un ejemplo para revisar cómo hacer esto:
 
@@ -426,7 +427,8 @@ console.log(result15c);
 /*-----------------------------Haz coincidir patrones de cadena de inicio-----------------*/
 /*Los desafíos anteriores demostraron que las expresiones regulares pueden ser utilizadas para buscar una serie de coincidencias. También se utilizan para buscar patrones en posiciones específicas en cadenas.
 
-En un desafío anterior, usaste el carácter caret (^) dentro de un conjunto de caracteres para crear un conjunto de caracteres en la forma [^thingsThatWillNotBeMatched]. Fuera de un conjunto de caracteres, el caret es utilizado para buscar patrones al principio de las cadenas.*/
+En un desafío anterior, usaste el carácter caret (^) dentro de un conjunto de caracteres para crear un conjunto de caracteres en la forma [^thingsThatWillNotBeMatched]. 
+Fuera de un conjunto de caracteres, el caret es utilizado para buscar patrones al principio de las cadenas.*/
 
 let firstString = "Ricky is first and can be found.";
 let firstRegex = /^Ricky/;
@@ -474,7 +476,8 @@ console.log(result17);
 /*
 Usando clases de caracteres, pudiste buscar todas las letras del alfabeto con [a-z]. Este tipo de clase de caracteres es tan común que existe un atajo para él, aunque también incluye algunos caracteres adicionales.
 
-La clase de caracteres más cercana en JavaScript para coincidir con el alfabeto es \w. Este atajo equivale a [A-Za-z0-9_]. Esta clase de caracteres coincide con letras mayúsculas y minúsculas más números. Ten en cuenta que esta clase de caracteres también incluye el carácter de guión bajo (_).
+La clase de caracteres más cercana en JavaScript para coincidir con el alfabeto es \w. Este atajo equivale a [A-Za-z0-9_]. 
+Esta clase de caracteres coincide con letras mayúsculas y minúsculas más números. Ten en cuenta que esta clase de caracteres también incluye el carácter de guión bajo (_).
 */
 let longHand = /[A-Za-z0-9_]+/;
 let shortHand = /\w+/;
@@ -498,7 +501,8 @@ let quoteSample18 = "The five boxing wizards jump quickly.";
 let alphabetRegexV2 = /\w/g; // Cambia esta línea
 let result18 = quoteSample18.match(alphabetRegexV2).length;
 console.log(result18);
-//en este caso agregamos la bandera g para encontrar todos los carácteres, porque de otra forma solamente retornaría la primera coincidencia. Para el ejercicio del teléfono se puede hacer algo interesante, un condicional con un if, si los números son 11, el primer carácter de la cadena debería ser 1.
+//en este caso agregamos la bandera g para encontrar todos los carácteres, porque de otra forma solamente retornaría la primera coincidencia. 
+//Para el ejercicio del teléfono se puede hacer algo interesante, un condicional con un if, si los números son 11, el primer carácter de la cadena debería ser 1.
 
 /*-----------------------Haz coincidir todo menos letras y números---------------*/
 /*
@@ -526,7 +530,8 @@ console.log(result19);
 
 console.log(nonAlphabetRegexPrub.test(quoteSample19));
 
-//es necesario explicar que en el ejercicio anterior se incluyen los espacios y el punto, se recuerda de nuevo el uso de la bandera g, que es la que nos devuelve la repetición y retorna los carácteres, a no ser que se agregue a la expresión en la parte final ".length" porque con esta adición retornará cantidad de coincidencias.
+//es necesario explicar que en el ejercicio anterior se incluyen los espacios y el punto, se recuerda de nuevo el uso de la bandera g, 
+//que es la que nos devuelve la repetición y retorna los carácteres, a no ser que se agregue a la expresión en la parte final ".length" porque con esta adición retornará cantidad de coincidencias.
 /*-----------------------------------Coincide con todos los números--------------*/
 /*
 Has aprendido atajos para patrones de cadenas comunes como los alfanuméricos. Otro patrón común es buscar solo dígitos o números.
