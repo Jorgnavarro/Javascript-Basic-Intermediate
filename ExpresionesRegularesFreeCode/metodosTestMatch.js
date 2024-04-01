@@ -279,7 +279,8 @@ let quoteSample10 = "Blueberry 3.141592653s are delicious.";
 let myRegex10 = /[h-s2-6]/ig; // Cambia esta línea
 let result10 = quoteSample10.match(myRegex10);// Cambia esta línea
 console.log(result10);
-//esta es la forma como se transforma en un array los números y letras encontrados en una cade de texto, las específicaciones dentro de corchetes[] son muy importantes para extraer con match las coindicencias y operar con ellas en caso de que así de requiera.
+//esta es la forma como se transforma en un array los números y letras encontrados en una cade de texto, 
+//las específicaciones dentro de corchetes[] son muy importantes para extraer con match las coindicencias y operar con ellas en caso de que así de requiera.
 
 /*--------------------Haz coincidir caracteres individuales no especificados-----------*/
 
@@ -312,7 +313,9 @@ Puedes usar el carácter + para comprobar si es así. Recuerda, el carácter o p
 
 Por ejemplo, /a+/g encontraría una coincidencia en abc y regresaría ["a"]. Debido al +, también encontraría una sola coincidencia en aabc y regresaría ["aa"].
 
-Si en su lugar estuvieras comprobando la cadena abab, se encontrarían dos coincidencias y regresaría ["a", "a"] porque los caracteres a no están en fila; hay una b entre ellos. Finalmente, dado que no hay una a en la cadena bcd, no se encontraría una coincidencia.
+Si en su lugar estuvieras comprobando la cadena abab, se encontrarían dos coincidencias y regresaría ["a", "a"] 
+
+porque los caracteres a no están en fila; hay una b entre ellos. Finalmente, dado que no hay una a en la cadena bcd, no se encontraría una coincidencia.
 */
 
 /*-------------------------------------ejercicio 12---------------------------*/
@@ -383,7 +386,8 @@ let myRegex14 = /<.*?>/g; // Cambia esta línea
 let result14 = text.match(myRegex14);
 console.log(result14);
 
-//con el "." estoy  indicando cualquier carácter, con el * indico encontrar cualquier tipo de carácter que se encuentre adentro de esta expresión <> y con ? uso la coincidencia perezosa, la cual busca la cadena más pequeña posible en este caso h1 y la retorna.
+//con el "." estoy  indicando cualquier carácter, con el * indico encontrar cualquier tipo de carácter que se encuentre adentro de esta expresión <> 
+//y con ? uso la coincidencia perezosa, la cual busca la cadena más pequeña posible en este caso h1 y la retorna.
 
 /*--------------------Encuentra uno o más criminales en una cacería-----------------------*/
 /*
@@ -517,7 +521,8 @@ let sentence = "Coding!";
 console.log(numbers19.match(shortHand19));
 console.log(sentence.match(shortHand19));
 
-//El primer match devuelve el valor ["%"] y el segundo devuelve ["!"], si queremos usar sólo el símbolo lo único que hacemos es agregar la bandera g, "/\W/g" de esta forma nos regresará el o los carácteres específicos contenidos en la cadena de texto a analizar.
+//El primer match devuelve el valor ["%"] y el segundo devuelve ["!"], si queremos usar sólo el símbolo lo único que hacemos es agregar la bandera g, 
+//"/\W/g" de esta forma nos regresará el o los carácteres específicos contenidos en la cadena de texto a analizar.
 
 /*-------------------------------------ejercicio 19-----------------------------*/
 //Usa la clase de caracteres abreviados \W para contar el número de caracteres no alfanuméricos en varias comillas y cadenas.
